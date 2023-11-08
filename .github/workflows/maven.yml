@@ -10,9 +10,9 @@ name: Software Architect Test CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "project" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "project" ]
 
 jobs:
   build:
