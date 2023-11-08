@@ -4,6 +4,8 @@ import java.util.UUID;
 
 /**
  * Created by konrad.eichstaedt@gmx.de on 08.11.23.
+ *
+ * Builder Pattern for seperate the creation of complex objects from other aspects
  */
 public class Project {
 
@@ -27,6 +29,10 @@ public class Project {
     return this.name;
   }
 
+  public String getDescription() {
+    return description;
+  }
+
   public static class Builder {
     private String id = UUID.randomUUID().toString();
 
@@ -36,6 +42,11 @@ public class Project {
 
     public Builder withName(String name) {
       this.name = name;
+      return this;
+    }
+
+    public Builder withDescription(String description) {
+      this.description = description;
       return this;
     }
 

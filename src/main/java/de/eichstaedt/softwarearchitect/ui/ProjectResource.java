@@ -13,6 +13,7 @@ public class ProjectResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Project> projects() {
-        return List.of(new Project.Builder().withName("Software Engineering Batchelor Course").build());
+        return List.of(new Project.Builder().withName("Software Engineering Batchelor Course")
+            .withDescription("Nice People here").build());
     }
 }
