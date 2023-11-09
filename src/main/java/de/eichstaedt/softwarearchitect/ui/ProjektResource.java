@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@Path("/projekte")
+@Path("/rest/projekte")
 public class ProjektResource {
 
     private static final List<Projekt> projekteDB = new ArrayList<>(asList(new Projekt.Builder()
