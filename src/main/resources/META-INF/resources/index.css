@@ -1,3 +1,20 @@
 body {
   margin: 10px;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+li a {
+  display: block;
+  text-transform: uppercase;
+}
+
+li a:hover {
+  background-color: #CC1132;
+  color: white;
+}

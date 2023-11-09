@@ -1,5 +1,6 @@
 package de.eichstaedt.softwarearchitect.ui;
 
+import de.eichstaedt.softwarearchitect.projekte.Auftraggeber;
 import de.eichstaedt.softwarearchitect.projekte.Projekt;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -13,7 +14,10 @@ public class ProjektResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Projekt> projects() {
-        return List.of(new Projekt.Builder().withName("Software Engineering Batchelor Course")
-            .withDescription("Nice People here").build());
+        return List.of(new Projekt.Builder()
+            .withName("Software Engineering Batchelor Course")
+            .withDescription("Nice People here")
+            .forAuftraggeber(new Auftraggeber("Abteilung A"))
+            .build());
     }
 }

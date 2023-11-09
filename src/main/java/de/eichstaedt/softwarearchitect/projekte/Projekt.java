@@ -15,10 +15,13 @@ public class Projekt {
 
   private final String description;
 
+  private final Auftraggeber auftraggeber;
+
   public Projekt(Builder builder) {
     this.id = builder.id;
     this.name = builder.name;
     this.description = builder.description;
+    this.auftraggeber = builder.auftraggeber;
   }
 
   public String getId() {
@@ -27,6 +30,10 @@ public class Projekt {
 
   public String getName() {
     return this.name;
+  }
+
+  public Auftraggeber getAuftraggeber() {
+    return auftraggeber;
   }
 
   public String getDescription() {
@@ -40,6 +47,8 @@ public class Projekt {
 
     private String description;
 
+    public Auftraggeber auftraggeber;
+
     public Builder withName(String name) {
       this.name = name;
       return this;
@@ -47,6 +56,11 @@ public class Projekt {
 
     public Builder withDescription(String description) {
       this.description = description;
+      return this;
+    }
+
+    public Builder forAuftraggeber(Auftraggeber auftraggeber) {
+      this.auftraggeber = auftraggeber;
       return this;
     }
 

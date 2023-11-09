@@ -15,7 +15,7 @@ public class AuftraggeberTest {
   @Test
   void testCreateAuftraggeber() {
 
-    Auftraggeber abteilungA = new Auftraggeber(UUID.randomUUID().toString(),"Abteilung A");
+    Auftraggeber abteilungA = new Auftraggeber("Abteilung A");
 
     assertNotNull(abteilungA);
   }
