@@ -1,5 +1,16 @@
 @startuml
 
+class de.eichstaedt.softwarearchitect.projekte.Auftraggeber {
+	{field} -id : String
+	{field} -name : String
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +id () : String
+	{method} +name () : String
+	{method} +toString () : String
+}
+
+
 class de.eichstaedt.softwarearchitect.projekte.Projekt {
 	{field} -description : String
 	{field} -id : String
