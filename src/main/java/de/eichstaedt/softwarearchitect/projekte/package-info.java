@@ -3,6 +3,6 @@
  *
  * Use Case Software Architect is creating a project
  */
-package de.eichstaedt.softwarearchitect.projects;
+package de.eichstaedt.softwarearchitect.projekte;
 
 

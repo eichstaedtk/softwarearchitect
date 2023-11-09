@@ -1,4 +1,4 @@
-package de.eichstaedt.softwarearchitect.projects;
+package de.eichstaedt.softwarearchitect.projekte;
 
 import java.util.UUID;
 
@@ -7,7 +7,7 @@ import java.util.UUID;
  *
  * Builder Pattern for seperate the creation of complex objects from other aspects
  */
-public class Project {
+public class Projekt {
 
   private final String id;
 
@@ -15,7 +15,7 @@ public class Project {
 
   private final String description;
 
-  public Project(Builder builder) {
+  public Projekt(Builder builder) {
     this.id = builder.id;
     this.name = builder.name;
     this.description = builder.description;
@@ -54,13 +54,13 @@ public class Project {
      * Build the Project object.
      * @return A new Project object.
      */
-    public Project build(){
+    public Projekt build(){
 
       if (name == null || name.trim().isEmpty()) {
         throw new IllegalStateException("Project name cannot be empty");
       }
 
-      return new Project(this);
+      return new Projekt(this);
     }
   }
 

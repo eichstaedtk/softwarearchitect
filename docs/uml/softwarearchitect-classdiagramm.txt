@@ -1,23 +1,23 @@
 @startuml
 
-class de.eichstaedt.softwarearchitect.projects.Project {
+class de.eichstaedt.softwarearchitect.projekte.Projekt {
 	{field} -description : String
 	{field} -id : String
 	{field} -name : String
 }
 
 
-class de.eichstaedt.softwarearchitect.projects.Project$Builder {
+class de.eichstaedt.softwarearchitect.projekte.Projekt$Builder {
 	{field} -description : String
 	{field} -id : String
 	{field} -name : String
-	{method} +build () : de.eichstaedt.softwarearchitect.projects.Project
-	{method} +withDescription ( paramString1 : String ) : de.eichstaedt.softwarearchitect.projects.Project$Builder
-	{method} +withName ( paramString1 : String ) : de.eichstaedt.softwarearchitect.projects.Project$Builder
+	{method} +build () : de.eichstaedt.softwarearchitect.projekte.Projekt
+	{method} +withDescription ( paramString1 : String ) : de.eichstaedt.softwarearchitect.projekte.Projekt$Builder
+	{method} +withName ( paramString1 : String ) : de.eichstaedt.softwarearchitect.projekte.Projekt$Builder
 }
 
 
-class de.eichstaedt.softwarearchitect.ui.ProjectResource {
+class de.eichstaedt.softwarearchitect.ui.ProjektResource {
 	{method} +projects () : java.util.List
 }
 
