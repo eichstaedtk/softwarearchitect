@@ -9,11 +9,11 @@ import java.util.UUID;
  */
 public class Project {
 
-  private String id;
+  private final String id;
 
-  private String name;
+  private final String name;
 
-  private String description;
+  private final String description;
 
   public Project(Builder builder) {
     this.id = builder.id;
@@ -50,7 +50,16 @@ public class Project {
       return this;
     }
 
+    /**
+     * Build the Project object.
+     * @return A new Project object.
+     */
     public Project build(){
+
+      if (name == null || name.trim().isEmpty()) {
+        throw new IllegalStateException("Project name cannot be empty");
+      }
+
       return new Project(this);
     }
   }
