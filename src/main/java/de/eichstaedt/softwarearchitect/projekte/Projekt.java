@@ -11,11 +11,15 @@ public class Projekt {
 
   private final String id;
 
-  private final String name;
+  private String name;
 
-  private final String description;
+  private String description;
 
-  private final Auftraggeber auftraggeber;
+  private Auftraggeber auftraggeber;
+
+  public Projekt() {
+    this.id = UUID.randomUUID().toString();
+  }
 
   public Projekt(Builder builder) {
     this.id = builder.id;
