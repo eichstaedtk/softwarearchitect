@@ -13,7 +13,7 @@ public class ProjektResourceTest {
     @Test
     public void testHelloEndpoint() {
         given()
-          .when().get("/projects")
+          .when().get("/projekte")
           .then()
              .statusCode(200)
              .body("name[0]",equalTo("Software Engineering Batchelor Course"));
