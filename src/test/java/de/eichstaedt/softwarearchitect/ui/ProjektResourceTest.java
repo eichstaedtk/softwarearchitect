@@ -11,7 +11,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class ProjektResourceTest {
 
     @Test
-    public void testHelloEndpoint() {
+    public void testGetAllProjekte() {
         given()
           .when().get("/projekte")
           .then()
