@@ -12,7 +12,7 @@ class ProjekteTable extends HTMLElement {
     const dataList = document.createElement('ul');
     data.forEach(item => {
       const listItem = document.createElement('li');
-      listItem.textContent = 'Name: '+ item.name+ ', Beschreibung: '+ item.description+', Auftraggeber: '+item.auftraggeber.name;
+      listItem.textContent = 'Name: '+ item.name+ ', Beschreibung: '+ item.description+', Auftraggeber: '+item.auftraggeber.name+'  Status: '+item.status;
       dataList.appendChild(listItem);
     });
 
@@ -21,7 +21,7 @@ class ProjekteTable extends HTMLElement {
 
   async loadData() {
     try {
-      const response = await fetch('/rest/projekte');
+      const response = await fetch('/rest/projektskizzen');
       if (response.ok) {
         const data = await response.json();
         console.log('Geladene Daten:', data);

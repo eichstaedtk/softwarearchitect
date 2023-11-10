@@ -1,4 +1,4 @@
-package de.eichstaedt.softwarearchitect.projekte;
+package de.eichstaedt.softwarearchitect.domain.projekte;
 
 import java.util.UUID;
 

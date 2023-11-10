@@ -1,4 +1,4 @@
-package de.eichstaedt.softwarearchitect.projekte;
+package de.eichstaedt.softwarearchitect.domain.projekte;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -8,13 +8,13 @@ import org.junit.jupiter.api.Test;
 /**
  * Created by konrad.eichstaedt@gmx.de on 08.11.23.
  */
-public class ProjektTest {
+public class ProjektSkizzeTest {
 
   @Test
   void testCreateAProject() {
 
-    Projekt sonar = new Projekt.Builder().withName("Sonar").build();
-    Projekt ereignisdb = new Projekt.Builder().withName("Ereignisdatenbank").build();
+    ProjektSkizze sonar = new ProjektSkizze.Builder().withName("Sonar").build();
+    ProjektSkizze ereignisdb = new ProjektSkizze.Builder().withName("Ereignisdatenbank").build();
 
     assertNotNull(sonar);
     assertNotNull(sonar.getId());

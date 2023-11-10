@@ -1,6 +1,12 @@
 @startuml
 
-class de.eichstaedt.softwarearchitect.projekte.Auftraggeber {
+class de.eichstaedt.softwarearchitect.application.ProjektSkizzeResource {
+	{method} +create ( paramProjektSkizze1 : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze ) : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze
+	{method} +projects () : java.util.List
+}
+
+
+class de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber {
 	{field} -id : String
 	{field} -name : String
 	{method} +equals ( paramObject1 : Object ) : boolean
@@ -11,30 +17,29 @@ class de.eichstaedt.softwarearchitect.projekte.Auftraggeber {
 }
 
 
-class de.eichstaedt.softwarearchitect.projekte.Projekt {
+class de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze {
 	{field} -description : String
 	{field} -id : String
 	{field} -name : String
 }
 
 
-class de.eichstaedt.softwarearchitect.projekte.Projekt$Builder {
+class de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder {
 	{field} -description : String
 	{field} -id : String
 	{field} -name : String
-	{method} +build () : de.eichstaedt.softwarearchitect.projekte.Projekt
-	{method} +withDescription ( paramString1 : String ) : de.eichstaedt.softwarearchitect.projekte.Projekt$Builder
-	{method} +withName ( paramString1 : String ) : de.eichstaedt.softwarearchitect.projekte.Projekt$Builder
-}
-
-
-class de.eichstaedt.softwarearchitect.ui.ProjektResource {
-	{method} +projects () : java.util.List
+	{method} +build () : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze
+	{method} +forAuftraggeber ( paramAuftraggeber1 : de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber ) : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder
+	{method} +withDescription ( paramString1 : String ) : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder
+	{method} +withName ( paramString1 : String ) : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder
 }
 
 
 
 
+de.eichstaedt.softwarearchitect.application.ProjektSkizzeResource "1" o-- "0..*"  de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze : PROJEKTE_DB
+de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze -->  de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber : auftraggeber
+de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder -->  de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber : auftraggeber
 
 
 @enduml

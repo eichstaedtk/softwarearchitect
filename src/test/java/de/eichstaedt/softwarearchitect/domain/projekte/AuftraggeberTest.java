@@ -1,10 +1,8 @@
-package de.eichstaedt.softwarearchitect.projekte;
+package de.eichstaedt.softwarearchitect.domain.projekte;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import de.eichstaedt.softwarearchitect.projekte.Auftraggeber;
-import java.util.UUID;
-import org.junit.jupiter.api.Assertions;
+import de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber;
 import org.junit.jupiter.api.Test;
 
 /**

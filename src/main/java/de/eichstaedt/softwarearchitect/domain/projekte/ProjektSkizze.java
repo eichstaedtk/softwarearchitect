@@ -1,4 +1,6 @@
-package de.eichstaedt.softwarearchitect.projekte;
+package de.eichstaedt.softwarearchitect.domain.projekte;
+
+import static de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenStatus.*;
 
 import java.util.UUID;
 
@@ -7,7 +9,7 @@ import java.util.UUID;
  *
  * Builder Pattern for seperate the creation of complex objects from other aspects
  */
-public class Projekt {
+public class ProjektSkizze {
 
   private final String id;
 
@@ -17,15 +19,19 @@ public class Projekt {
 
   private Auftraggeber auftraggeber;
 
-  public Projekt() {
+  private ProjektSkizzenStatus status;
+
+  public ProjektSkizze() {
     this.id = UUID.randomUUID().toString();
+    this.status = IN_ERSTELLUNG;
   }
 
-  public Projekt(Builder builder) {
+  public ProjektSkizze(Builder builder) {
     this.id = builder.id;
     this.name = builder.name;
     this.description = builder.description;
     this.auftraggeber = builder.auftraggeber;
+    this.status = IN_ERSTELLUNG;
   }
 
   public String getId() {
@@ -38,6 +44,10 @@ public class Projekt {
 
   public Auftraggeber getAuftraggeber() {
     return auftraggeber;
+  }
+
+  public ProjektSkizzenStatus getStatus() {
+    return status;
   }
 
   public String getDescription() {
@@ -72,13 +82,13 @@ public class Projekt {
      * Build the Project object.
      * @return A new Project object.
      */
-    public Projekt build(){
+    public ProjektSkizze build(){
 
       if (name == null || name.trim().isEmpty()) {
         throw new IllegalStateException("Project name cannot be empty");
       }
 
-      return new Projekt(this);
+      return new ProjektSkizze(this);
     }
   }
 
