@@ -13,7 +13,7 @@ public class ProjektSkizzeResourceTest {
     @Test
     public void testGetAllProjekte() {
         given()
-          .when().get("/rest/projektskizzen")
+          .when().get("/rest/projektskizze")
           .then()
              .statusCode(200)
              .body("name[0]",equalTo("Software Engineering Batchelor Course"));

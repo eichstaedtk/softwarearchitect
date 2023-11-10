@@ -2,6 +2,7 @@ package de.eichstaedt.softwarearchitect.domain.projekte;
 
 import static de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenStatus.*;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -21,9 +22,12 @@ public class ProjektSkizze {
 
   private ProjektSkizzenStatus status;
 
+  private LocalDateTime erstelldatum;
+
   public ProjektSkizze() {
     this.id = UUID.randomUUID().toString();
     this.status = IN_ERSTELLUNG;
+    this.erstelldatum = LocalDateTime.now();
   }
 
   public ProjektSkizze(Builder builder) {
@@ -32,6 +36,7 @@ public class ProjektSkizze {
     this.description = builder.description;
     this.auftraggeber = builder.auftraggeber;
     this.status = IN_ERSTELLUNG;
+    this.erstelldatum = LocalDateTime.now();
   }
 
   public String getId() {
@@ -52,6 +57,10 @@ public class ProjektSkizze {
 
   public String getDescription() {
     return description;
+  }
+
+  public LocalDateTime getErstelldatum() {
+    return erstelldatum;
   }
 
   public static class Builder {

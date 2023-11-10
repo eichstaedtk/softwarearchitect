@@ -13,7 +13,7 @@ import jakarta.ws.rs.core.MediaType;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/rest/projektskizzen")
+@Path("/rest/projektskizze")
 public class ProjektSkizzeResource {
 
     private static final List<ProjektSkizze> PROJEKTE_DB = new ArrayList<>(asList(new ProjektSkizze.Builder()

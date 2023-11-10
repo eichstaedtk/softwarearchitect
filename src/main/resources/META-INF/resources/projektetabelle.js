@@ -5,7 +5,7 @@ class ProjekteTable extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = `<h2>Projekte</h2>`;
+    this.innerHTML = `<h2>Projektskizzen</h2>`;
   }
 
   renderData(data) {
@@ -21,7 +21,7 @@ class ProjekteTable extends HTMLElement {
 
   async loadData() {
     try {
-      const response = await fetch('/rest/projektskizzen');
+      const response = await fetch('/rest/projektskizze');
       if (response.ok) {
         const data = await response.json();
         console.log('Geladene Daten:', data);
