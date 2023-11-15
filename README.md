@@ -10,13 +10,13 @@ Template Version 8.2 DE. (basiert auf AsciiDoc Version), Januar 2023
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. Siehe <https://arc42.org>.
 
-# Einführung und Ziele {#section-introduction-and-goals}
+# Einführung und Ziele
 
-## Aufgabenstellung {#_aufgabenstellung}
+## Aufgabenstellung
 
-## Qualitätsziele {#_qualit_tsziele}
+## Qualitätsziele
 
-## Stakeholder {#_stakeholder}
+## Stakeholder
 
 +-----------------+-----------------+-----------------------------------+
 | Rolle           | Kontakt         | Erwartungshaltung                 |
@@ -26,17 +26,17 @@ contributors. Siehe <https://arc42.org>.
 | *\<Rolle-2>*    | *\<Kontakt-2>*  | *\<Erwartung-2>*                  |
 +-----------------+-----------------+-----------------------------------+
 
-# Randbedingungen {#section-architecture-constraints}
+# Randbedingungen
 
-# Kontextabgrenzung {#section-system-scope-and-context}
+# Kontextabgrenzung
 
-## Fachlicher Kontext {#_fachlicher_kontext}
+## Fachlicher Kontext
 
 **\<Diagramm und/oder Tabelle>**
 
 **\<optional: Erläuterung der externen fachlichen Schnittstellen>**
 
-## Technischer Kontext {#_technischer_kontext}
+## Technischer Kontext
 
 **\<Diagramm oder Tabelle>**
 
@@ -44,11 +44,11 @@ contributors. Siehe <https://arc42.org>.
 
 **\<Mapping fachliche auf technische Schnittstellen>**
 
-# Lösungsstrategie {#section-solution-strategy}
+# Lösungsstrategie
 
-# Bausteinsicht {#section-building-block-view}
+# Bausteinsicht
 
-## Whitebox Gesamtsystem {#_whitebox_gesamtsystem}
+## Whitebox Gesamtsystem
 
 ***\<Übersichtsdiagramm>***
 
@@ -64,7 +64,7 @@ Wichtige Schnittstellen
 
 :   *\<Beschreibung wichtiger Schnittstellen>*
 
-### \<Name Blackbox 1> {#__name_blackbox_1}
+### \<Name Blackbox 1>
 
 *\<Zweck/Verantwortung>*
 
@@ -78,70 +78,70 @@ Wichtige Schnittstellen
 
 *\<(optional) Offene Punkte/Probleme/Risiken>*
 
-### \<Name Blackbox 2> {#__name_blackbox_2}
+### \<Name Blackbox 2> 
 
 *\<Blackbox-Template>*
 
-### \<Name Blackbox n> {#__name_blackbox_n}
+### \<Name Blackbox n> 
 
 *\<Blackbox-Template>*
 
-### \<Name Schnittstelle 1> {#__name_schnittstelle_1}
+### \<Name Schnittstelle 1> 
 
 ...
 
-### \<Name Schnittstelle m> {#__name_schnittstelle_m}
+### \<Name Schnittstelle m> 
 
-## Ebene 2 {#_ebene_2}
+## Ebene 2 
 
-### Whitebox *\<Baustein 1>* {#_whitebox_emphasis_baustein_1_emphasis}
+### Whitebox *\<Baustein 1>* 
 
 *\<Whitebox-Template>*
 
-### Whitebox *\<Baustein 2>* {#_whitebox_emphasis_baustein_2_emphasis}
+### Whitebox *\<Baustein 2>*
 
 *\<Whitebox-Template>*
 
 ...
 
-### Whitebox *\<Baustein m>* {#_whitebox_emphasis_baustein_m_emphasis}
+### Whitebox *\<Baustein m>* 
 
 *\<Whitebox-Template>*
 
 ## Ebene 3 {#_ebene_3}
 
-### Whitebox \<\_Baustein x.1\_\> {#_whitebox_baustein_x_1}
+### Whitebox \<\_Baustein x.1\_\> 
 
 *\<Whitebox-Template>*
 
-### Whitebox \<\_Baustein x.2\_\> {#_whitebox_baustein_x_2}
+### Whitebox \<\_Baustein x.2\_\> 
 
 *\<Whitebox-Template>*
 
-### Whitebox \<\_Baustein y.1\_\> {#_whitebox_baustein_y_1}
+### Whitebox \<\_Baustein y.1\_\> 
 
 *\<Whitebox-Template>*
 
 # Laufzeitsicht {#section-runtime-view}
 
-## *\<Bezeichnung Laufzeitszenario 1>* {#__emphasis_bezeichnung_laufzeitszenario_1_emphasis}
+## *\<Bezeichnung Laufzeitszenario 1>* 
 
 -   \<hier Laufzeitdiagramm oder Ablaufbeschreibung einfügen>
 
 -   \<hier Besonderheiten bei dem Zusammenspiel der Bausteine in diesem
     Szenario erläutern>
 
-## *\<Bezeichnung Laufzeitszenario 2>* {#__emphasis_bezeichnung_laufzeitszenario_2_emphasis}
+## *\<Bezeichnung Laufzeitszenario 2>* 
 
 ...
 
-## *\<Bezeichnung Laufzeitszenario n>* {#__emphasis_bezeichnung_laufzeitszenario_n_emphasis}
+## *\<Bezeichnung Laufzeitszenario n>* 
 
 ...
 
-# Verteilungssicht {#section-deployment-view}
+# Verteilungssicht 
 
-## Infrastruktur Ebene 1 {#_infrastruktur_ebene_1}
+## Infrastruktur Ebene 1 
 
 ***\<Übersichtsdiagramm>***
 
@@ -159,39 +159,39 @@ Zuordnung von Bausteinen zu Infrastruktur
 
 ## Infrastruktur Ebene 2 {#_infrastruktur_ebene_2}
 
-### *\<Infrastrukturelement 1>* {#__emphasis_infrastrukturelement_1_emphasis}
+### *\<Infrastrukturelement 1>* 
 
 *\<Diagramm + Erläuterungen>*
 
-### *\<Infrastrukturelement 2>* {#__emphasis_infrastrukturelement_2_emphasis}
+### *\<Infrastrukturelement 2>* 
 
 *\<Diagramm + Erläuterungen>*
 
 ...
 
-### *\<Infrastrukturelement n>* {#__emphasis_infrastrukturelement_n_emphasis}
+### *\<Infrastrukturelement n>* 
 
 *\<Diagramm + Erläuterungen>*
 
-# Querschnittliche Konzepte {#section-concepts}
+# Querschnittliche Konzepte 
 
-## *\<Konzept 1>* {#__emphasis_konzept_1_emphasis}
+## *\<Konzept 1>* 
 
 *\<Erklärung>*
 
-## *\<Konzept 2>* {#__emphasis_konzept_2_emphasis}
+## *\<Konzept 2>* 
 
 *\<Erklärung>*
 
 ...
 
-## *\<Konzept n>* {#__emphasis_konzept_n_emphasis}
+## *\<Konzept n>* 
 
 *\<Erklärung>*
 
-# Architekturentscheidungen {#section-design-decisions}
+# Architekturentscheidungen 
 
-# Qualitätsanforderungen {#section-quality-scenarios}
+# Qualitätsanforderungen 
 
 ::: formalpara-title
 **Weiterführende Informationen**
@@ -200,13 +200,13 @@ Zuordnung von Bausteinen zu Infrastruktur
 Siehe [Qualitätsanforderungen](https://docs.arc42.org/section-10/) in
 der online-Dokumentation (auf Englisch!).
 
-## Qualitätsbaum {#_qualit_tsbaum}
+## Qualitätsbaum 
 
-## Qualitätsszenarien {#_qualit_tsszenarien}
+## Qualitätsszenarien 
 
-# Risiken und technische Schulden {#section-technical-risks}
+# Risiken und technische Schulden 
 
-# Glossar {#section-glossary}
+# Glossar 
 
 +-----------------------+-----------------------------------------------+
 | Begriff               | Definition                                    |
