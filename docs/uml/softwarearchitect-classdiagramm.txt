@@ -19,6 +19,7 @@ class de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber {
 
 class de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze {
 	{field} -description : String
+	{field} -erstelldatum : java.time.LocalDateTime
 	{field} -id : String
 	{field} -name : String
 }
@@ -35,11 +36,34 @@ class de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder {
 }
 
 
+interface de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenRepository {
+	{method}  {abstract} +add ( paramProjektSkizze1 : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze ) : void
+	{method}  {abstract} +findAll () : java.util.List
+}
 
 
-de.eichstaedt.softwarearchitect.application.ProjektSkizzeResource "1" o-- "0..*"  de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze : PROJEKTE_DB
+enum de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenStatus {
+	{field} +Abgelehnt
+	{field} +Genehmigt zur Umsetzung
+	{field} +Management prüft
+	{field} +Wird erstellt
+}
+
+
+class de.eichstaedt.softwarearchitect.infrastructure.ProjektSkizzenInMemoryAdapter {
+	{method} +add ( paramProjektSkizze1 : de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze ) : void
+	{method} +findAll () : java.util.List
+}
+
+
+
+
+de.eichstaedt.softwarearchitect.application.ProjektSkizzeResource *--  de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenRepository : repository
 de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze -->  de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber : auftraggeber
+de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze -->  de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenStatus : status
 de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze$Builder -->  de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber : auftraggeber
+de.eichstaedt.softwarearchitect.infrastructure.ProjektSkizzenInMemoryAdapter "1" o-- "0..*"  de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze : data
+de.eichstaedt.softwarearchitect.infrastructure.ProjektSkizzenInMemoryAdapter ..|>  de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenRepository
 
 
 @enduml

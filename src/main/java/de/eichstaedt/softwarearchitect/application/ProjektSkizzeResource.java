@@ -4,6 +4,8 @@ import static java.util.Arrays.asList;
 
 import de.eichstaedt.softwarearchitect.domain.projekte.Auftraggeber;
 import de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizze;
+import de.eichstaedt.softwarearchitect.domain.projekte.ProjektSkizzenRepository;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
@@ -16,23 +18,24 @@ import java.util.List;
 @Path("/rest/projektskizze")
 public class ProjektSkizzeResource {
 
-    private static final List<ProjektSkizze> PROJEKTE_DB = new ArrayList<>(asList(new ProjektSkizze.Builder()
-        .withName("Software Engineering Batchelor Course")
-        .withDescription("Educate nice People as Software Engineers")
-        .forAuftraggeber(new Auftraggeber("Abteilung A"))
-        .build()));
+    private final ProjektSkizzenRepository repository;
+
+    @Inject
+    public ProjektSkizzeResource(ProjektSkizzenRepository repository) {
+        this.repository = repository;
+    }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<ProjektSkizze> projects() {
-        return PROJEKTE_DB;
+        return repository.findAll();
     }
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public ProjektSkizze create(ProjektSkizze projektSkizze){
-        PROJEKTE_DB.add(projektSkizze);
+        repository.add(projektSkizze);
         return projektSkizze;
     }
 }
