@@ -11,9 +11,18 @@ class ProjekteTable extends HTMLElement {
   renderData(data) {
     const dataList = document.createElement('ul');
     data.forEach(item => {
-      const listItem = document.createElement('li');
-      listItem.textContent = 'Name: '+ item.name+ ', Beschreibung: '+ item.description+', Auftraggeber: '+item.auftraggeber.name+'  Status: '+item.status;
-      dataList.appendChild(listItem);
+      const listItemName = document.createElement('li');
+      const listItemBeschreibung = document.createElement('li');
+      const listItemAuftraggeber = document.createElement('li');
+      const listItemStatus = document.createElement('li');
+      listItemName.textContent = 'Name: '+ item.name;
+      listItemBeschreibung.textContent = 'Beschreibung: '+ item.description;
+      listItemAuftraggeber.textContent = 'Auftraggeber: '+item.auftraggeber.name;
+      listItemStatus.textContent =  'Status: '+item.status;
+      dataList.appendChild(listItemName);
+      dataList.appendChild(listItemBeschreibung);
+      dataList.appendChild(listItemAuftraggeber)
+      dataList.appendChild(listItemStatus)
     });
 
     this.appendChild(dataList);
